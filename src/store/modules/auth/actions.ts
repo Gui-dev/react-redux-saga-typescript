@@ -1,3 +1,5 @@
+import { TYPES_AUTH } from './reducer'
+
 interface ISignInRequestProps {
   email: string
   password: string
@@ -5,7 +7,7 @@ interface ISignInRequestProps {
 
 export const signInRequest = ({ email, password }: ISignInRequestProps) => {
   return {
-    type: '@auth/SIGN_IN_REQUEST',
+    type: TYPES_AUTH.signInRequest,
     payload: {
       email,
       password
