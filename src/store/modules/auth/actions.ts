@@ -1,3 +1,5 @@
+import { action } from 'typesafe-actions'
+
 import { TYPES_AUTH } from './reducer'
 
 interface ISignInRequestProps {
@@ -6,11 +8,8 @@ interface ISignInRequestProps {
 }
 
 export const signInRequest = ({ email, password }: ISignInRequestProps) => {
-  return {
-    type: TYPES_AUTH.signInRequest,
-    payload: {
-      email,
-      password
-    }
-  }
+  return action(TYPES_AUTH.signInRequest,  {
+    email,
+    password
+  })
 }
