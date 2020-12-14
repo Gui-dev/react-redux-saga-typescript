@@ -7,9 +7,23 @@ interface ISignInRequestProps {
   password: string
 }
 
+interface ISignInSuccessProps {
+  token: string
+}
+
 export const signInRequest = ({ email, password }: ISignInRequestProps) => {
   return action(TYPES_AUTH.signInRequest,  {
     email,
     password
   })
+}
+
+export const signInSuccess = ({ token }: ISignInSuccessProps) => {
+  return action(TYPES_AUTH.signInSuccess, {
+    token
+  })
+}
+
+export const signInFailure = () => {
+  return action(TYPES_AUTH.signInFailure)
 }
