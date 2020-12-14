@@ -1,7 +1,9 @@
 import { IAuthState, AuthAction } from './types'
 
 export const TYPES_AUTH = {
-  signInRequest: '@auth/SIGN_IN_REQUEST'
+  signInRequest: '@auth/SIGN_IN_REQUEST',
+  signInSuccess: '@auth/SIGN_IN_SUCCESS',
+  signInFailure: '@auth/SIGN_IN_FAILURE'
 }
 
 const INITIAL_STATE: IAuthState = {
